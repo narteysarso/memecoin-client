@@ -1,4 +1,4 @@
-import { Button, Card, Col, Divider, Row, Typography } from "antd";
+import { Button, Card, Col, Divider, Row, Tag, Typography } from "antd";
 import { useLayoutEffect } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -61,7 +61,7 @@ export default function Home() {
     return (
         <Row justify="center" align="center" style={{ marginTop: '2vh' }}>
             <Col xs={24} sm={18} md={12}>
-                <Card title="Meme Coin Project">
+                <Card title={<Typography.Title level={5}>Meme Coin Project | <Tag color="magenta">This project run on the Rinkeby Test Net</Tag></Typography.Title>}>
                     <Row justify="space-around" >
                         <Col xs={24} md={19}>
                             <Row>

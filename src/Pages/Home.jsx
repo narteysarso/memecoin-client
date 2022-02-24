@@ -61,7 +61,7 @@ export default function Home() {
     return (
         <Row justify="center" align="center" style={{ marginTop: '2vh' }}>
             <Col xs={24} sm={18} md={12}>
-                <Card title={<Typography.Title level={5}>Meme Coin Project | <Tag color="magenta">This project run on the Rinkeby Test Net</Tag></Typography.Title>}>
+                <Card title={<Typography.Title level={5}>Sarz Coin Project | <Tag color="magenta">This project run on the Rinkeby Test Net</Tag></Typography.Title>}>
                     <Row justify="space-around" >
                         <Col xs={24} md={19}>
                             <Row>

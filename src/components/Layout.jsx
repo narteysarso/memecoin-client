@@ -14,7 +14,7 @@ export default function MainLayout(props) {
                 <Row justify="center">
                     <Col>
                         <Typography.Title level={5}>
-                            MemeCoin &copy; {(new Date()).getFullYear()} |
+                            SarzCoin &copy; {(new Date()).getFullYear()} |
                             Hire me: <a href="https://linkedin/in/narteykodjosarso" rel="noreferrer">Nartey Kodjo-Sarso</a>
                         </Typography.Title>
                     </Col>

@@ -41,11 +41,15 @@ export default function Home() {
             // Promise.all()
            
             try {
-                setWallet(await connectWallet());
-                setOwnerAddress(await getOwner());
-                setTotalSupply(await getTotalSupply());
-                setTicker(await getSymbol());
-                setCoin(await getTokenName() + '🦊');
+                const [wallet, owner, totalSupply, symbol, tokeName] = await Promise.all([
+                    connectWallet(),getOwner(),getTotalSupply(),getSymbol(),getTokenName()
+                ]);
+                console.log(totalSupply);
+                setWallet(wallet );
+                setOwnerAddress(owner );
+                setTotalSupply(totalSupply );
+                setTicker(symbol );
+                setCoin(tokeName+ '🦊');
                 setContractAddress(getContractAddress());
             } catch (error) {
                 console.log(error)

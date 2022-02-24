@@ -24,8 +24,6 @@ function getContract() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(process.env.REACT_APP_CONTRACT_ADDRESS, contractAbi, signer);
 
-    console.log(provider);
-
     return contract;
 }
 

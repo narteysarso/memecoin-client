@@ -1,4 +1,4 @@
-import { Button, Card, Col, Divider, Row, Tag, Typography } from "antd";
+import { Button, Card, Col, Divider, message, Row, Tag, Typography } from "antd";
 import { useLayoutEffect } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -52,7 +52,6 @@ export default function Home() {
                 setCoin(tokeName+ '🦊');
                 setContractAddress(getContractAddress());
             } catch (error) {
-                console.log(error)
                 setError(error.message)
             }
         })();
@@ -61,6 +60,14 @@ export default function Home() {
     useEffect(() => {
         setIsOwner(ownerAddress?.toLowerCase() === wallet?.toLowerCase());
     }, [ownerAddress, wallet]);
+
+    useEffect(()=>{
+        if(!error || !error?.message){
+            return;
+        }
+
+        message.error(error.message);
+    },[error])
 
     return (
         <Row justify="center" align="center" style={{ marginTop: '2vh' }}>
